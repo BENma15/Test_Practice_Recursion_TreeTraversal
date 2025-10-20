@@ -12,8 +12,15 @@ struct TreeNode {
 
 // Inorder traversal function (recursive)
 void Traversal(TreeNode* node) {
-  // TODO: Inorder traversal function (recursive)
-  // Use `std::cout << node->data << " ";` to print the node data
+  if (node == nullptr) {
+    return;
+  }
+
+  Traversal(node->left);
+
+  std::cout<<node->data<<" "<<std::endl;
+
+  Traversal(node->right);
 }
 
 int main() {
